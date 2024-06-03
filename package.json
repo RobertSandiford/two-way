@@ -1,0 +1,10 @@
+{
+    "name": "@two-way",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "concurrently \"pnpm --dir shared build\" \"pnpm --dir server build\" \"pnpm --dir client build\""
+    },
+    "dependencies": {
+        "concurrently": "^8.2.2"
+    }
+}

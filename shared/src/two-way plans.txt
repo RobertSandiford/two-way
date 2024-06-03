@@ -1,0 +1,16 @@
+
+Server
+new TwoWayServer<ClientFunctions>(port, serverFunctions)
+    OnConnection
+        Client available
+            Make Calls
+    CallAll
+
+
+Client
+new TwoWayClient<ServerFunctions(serverLocation, clientFunctions)
+  connection = Promise<connection>
+  Connect
+  OnConnected
+    Calls available
+    

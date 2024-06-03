@@ -1,0 +1,29 @@
+{
+    "name": "@two-way/client",
+    "version": "0.0.0",
+    "type": "module",
+    "main": "./dist/index.js",
+    "exports": {
+        ".": "./dist/index.js",
+        "./*": "./dist/*"
+    },
+    "scripts": {
+        "build": "tsc --watch",
+        "prepublish": "tsc",
+        "test": "sxy-test"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.12",
+        "eslint": "^8.57.0",
+        "sxy-types": "^1.0.17",
+        "typescript": "^5.4.5",
+        "eslint-config-sandi-ts": "^0.1.13"
+    },
+    "dependencies": {
+        "@two-way/shared": "link:..\\shared"
+    },
+    "description": "",
+    "keywords": [],
+    "author": "Robert Sandiford",
+    "license": "ISC"
+}
