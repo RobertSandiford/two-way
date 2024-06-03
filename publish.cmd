@@ -1,7 +1,4 @@
 @echo off
-(
-    npm version %* --no-git-tag-version
-)
-pnpm --dir shared publish
-pnpm --dir server publish
-pnpm --dir client publish
+pnpm --dir shared publish --access=public
+pnpm --dir server publish --access=public
+pnpm --dir client publish --access=public
