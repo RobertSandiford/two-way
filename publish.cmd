@@ -6,10 +6,10 @@
 ) && (
     npm --prefix client version %*
 ) && (
-    git commit . -m "save for %*"
-) && (
-    npm version %* 
-) && (
+    npm version %* --no-git-tag-version
+) &&  (
+    git commit . -m "%*" && git tag %*
+)  && (
     cd shared && pnpm publish --access=public
 ) && (
     cd ../server && pnpm publish --access=public
