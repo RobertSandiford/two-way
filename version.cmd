@@ -7,4 +7,6 @@
     npm --prefix client version %* --no-git-tag-version
 ) & (
     npm version %* --no-git-tag-version
+) & (
+    git commit . -m "%*"
 )
