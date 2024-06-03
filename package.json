@@ -1,6 +1,6 @@
 {
     "name": "@two-way/repo",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "scripts": {
         "build": "concurrently \"pnpm --dir shared build\" \"pnpm --dir server build\" \"pnpm --dir client build\""
     },
