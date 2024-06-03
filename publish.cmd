@@ -1,8 +1,19 @@
 @echo off
+@echo off
 (
-    cd shared && pnpm publish --access=public %*
+    npm --prefix shared version %*
 ) && (
-    cd server && pnpm publish --access=public %*
+    npm --prefix server version %* 
 ) && (
-    cd client && pnpm publish --access=public %*
+    npm --prefix client version %*
+) && (
+    git commit . -m "save for %*"
+) && (
+    npm version %* 
+) && (
+    cd shared && pnpm publish --access=public
+) && (
+    cd server && pnpm publish --access=public
+) && (
+    cd client && pnpm publish --access=public
 )
