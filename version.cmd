@@ -6,5 +6,7 @@
 ) && (
     npm --prefix client version %*
 ) && (
+    git commit . -m "%*"
+) && (
     npm version %* 
 ) 
