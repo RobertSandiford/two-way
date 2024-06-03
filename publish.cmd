@@ -1,2 +1,8 @@
 @echo off
-pnpm -r publish --access=public
+(
+    cd shared && pnpm publish --access=public %*
+) && (
+    cd server && pnpm publish --access=public %*
+) && (
+    cd client && pnpm publish --access=public %*
+)
