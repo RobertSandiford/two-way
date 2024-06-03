@@ -1,6 +1,6 @@
 {
     "name": "@two-way/client",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "type": "module",
     "main": "./dist/index.js",
     "exports": {
@@ -20,7 +20,7 @@
         "eslint-config-sandi-ts": "^0.1.13"
     },
     "dependencies": {
-        "@two-way/shared": "link:..\\shared"
+        "@two-way/shared": "workspace:*"
     },
     "description": "",
     "keywords": [],
