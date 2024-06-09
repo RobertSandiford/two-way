@@ -1,7 +1,10 @@
 {
     "name": "@two-way/shared",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "type": "module",
+    "files": [
+        "dist"
+    ],
     "main": "./dist/index.js",
     "exports": {
         ".": "./dist/index.js",
