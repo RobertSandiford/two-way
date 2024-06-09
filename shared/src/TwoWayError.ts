@@ -1,6 +1,6 @@
 
 export class TwoWayError extends Error {
-    name = "TwoWay Error"
+    name = "TwoWay Error" as const
 }
 
 export function IsTwoWayError(u: unknown): u is TwoWayError {
