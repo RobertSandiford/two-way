@@ -1,6 +1,6 @@
 {
     "name": "@two-way/client",
-    "version": "0.1.16",
+    "version": "0.1.17",
     "type": "module",
     "files": [
         "dist",
@@ -19,12 +19,12 @@
     "devDependencies": {
         "@types/node": "^20.12.12",
         "eslint": "^8.57.0",
-        "sxy-types": "^1.0.17",
         "typescript": "^5.4.5",
         "eslint-config-sandi-ts": "^0.1.13"
     },
     "dependencies": {
-        "@two-way/shared": "workspace:*"
+        "@two-way/shared": "workspace:*",
+        "sxy-types": "^1.0.17"
     },
     "description": "",
     "keywords": [],

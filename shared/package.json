@@ -1,6 +1,6 @@
 {
     "name": "@two-way/shared",
-    "version": "0.1.16",
+    "version": "0.1.17",
     "type": "module",
     "files": [
         "dist",
@@ -22,14 +22,14 @@
     "license": "ISC",
     "devDependencies": {
         "@types/node": "^20.12.12",
-        "@types/ws": "^8.5.10",
-        "sxy-types": "^1.0.17",
         "ts-toolbelt": "^9.6.0",
         "typescript": "^5.4.5",
         "eslint": "^8.57.0",
         "eslint-config-sandi-ts": "^0.1.13"
     },
     "dependencies": {
-        "ws": "^8.17.0"
+        "ws": "^8.17.0",
+        "@types/ws": "^8.5.10",
+        "sxy-types": "^1.0.17"
     }
 }
