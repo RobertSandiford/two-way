@@ -4,7 +4,7 @@ import { BrowserWebSocket } from './BrowserWebSocket.js'
 import { errorLog } from '@two-way/shared/lib.js'
 import { makeCaller } from '@two-way/shared/makeCaller.fullDynamicProcedures.js'
 import {
-    TwoWayCaller, TwoWayLooseCaller, Valid2WayFunctions,
+    TwoWayCaller, TwoWayLooseCaller, ValidTwoWayFunctions,
     TwoWayFunctionsLowConstraint
 } from '@two-way/shared/types.fullDynamicProcedures.js'
 import { makeLooseCaller } from '@two-way/shared/makeLooseCaller.js'
@@ -37,7 +37,7 @@ export class TwoWayClient<
     readonly looseCaller: Expand<TwoWayLooseCaller<ServerFunctions>>
     constructor(
         url: string | URL,
-        clientFunctions?: Valid2WayFunctions<ClientFunctions>,
+        clientFunctions?: ValidTwoWayFunctions<ClientFunctions>,
         listeners?: TwoWayClientConstructorListeners<ServerFunctions>
     ) {
         //console.log('try to connect to socket ' + url)
@@ -54,7 +54,7 @@ export class TwoWayClient<
             })
         })
         socket.on('error', (error: unknown) => {
-            errorLog('2Way Socket Error', error)
+            errorLog('two-way Socket Error', error)
         })
 
         if (ownFunctions) {
@@ -62,7 +62,7 @@ export class TwoWayClient<
         }
     }
     close = () => {
-        console.log('closing 2WayClient\'s web socket')
+        console.log('closing TwoWayClient\'s web socket')
         this.webSocket.close()// this returns nothing and doesn't seem to care whether it is already closed or not
     }
     [Symbol.dispose] = () => {

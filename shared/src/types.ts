@@ -46,7 +46,7 @@
 
 // // Function Controls
 // export type TwoWayFunctionBasicConstraint = (this: IWebSocket, ...args: never[]) => unknown
-// export type Valid2WayFunction<T extends TwoWayFunctionBasicConstraint> = Parameters<T> extends JsonValue[]
+// export type ValidTwoWayFunction<T extends TwoWayFunctionBasicConstraint> = Parameters<T> extends JsonValue[]
 //     ? T
 //     : never
 
@@ -120,7 +120,7 @@
 //     [key: string]: TwoWayFunctionsEntry
 // }
 
-// export type Valid2WayFunctions<Fs extends TwoWayFunctionsLowConstraint> = {
+// export type ValidTwoWayFunctions<Fs extends TwoWayFunctionsLowConstraint> = {
 //     [K in keyof Fs]: Fs[K] extends TwoWayFunctionBasicConstraint
 //         // Fs[K] is a procedure/function
 //         ? Parameters<Fs[K]> extends JsonValue[]
@@ -133,7 +133,7 @@
 //         : Fs[K] extends TwoWayFunctionsLowConstraint // Fs[K] is an object probably containing procedures/functions or more objects
 //                                                  // This extends check is a given, it is just here to help TS narrow the type
 //                                                  // as it seems not to narrow the type in the else case
-//             ? Valid2WayFunctions<Fs[K]> // Fs[K] is an object probably containing procedures/functions or more objects
+//             ? ValidTwoWayFunctions<Fs[K]> // Fs[K] is an object probably containing procedures/functions or more objects
 //             : never
 // }
 // type JsonableReturn<R, F> = R extends (JsonValue | VoidResult)

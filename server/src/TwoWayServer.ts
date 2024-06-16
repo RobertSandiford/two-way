@@ -2,7 +2,9 @@
 import type { IncomingMessage } from 'http'
 import { WebSocketServer as WSServer, WebSocket as WSSocket } from 'ws'
 import { makeCaller } from '@two-way/shared/makeCaller.fullDynamicProcedures.js'
-import type { TwoWayCaller, Valid2WayFunctions, TwoWayFunctionsLowConstraint } from '@two-way/shared/types.fullDynamicProcedures.js'
+import type {
+    TwoWayCaller, ValidTwoWayFunctions, TwoWayFunctionsLowConstraint
+} from '@two-way/shared/types.fullDynamicProcedures.js'
 import { ServerWebSocket } from './ServerWebSocket.js'
 import { makeCallListener } from '@two-way/shared/makeCallListener.js'
 import { log } from '@two-way/shared/lib.js'
@@ -33,7 +35,7 @@ export class TwoWayServer<
     readonly clients = new Set<ServerWebSocket>
     constructor(
         port: number,
-        serverFunctions?: Valid2WayFunctions<ServerFunctions>,
+        serverFunctions?: ValidTwoWayFunctions<ServerFunctions>,
         listeners?: TwoWayServerConstructorListeners<ClientFunctions>
     ) {
         // save a reference to this
@@ -68,7 +70,7 @@ export class TwoWayServer<
             const caller = makeCaller<ClientFunctions>(socket)
 
             if (ownFunctions) {
-                socket.on('message', makeCallListener<Valid2WayFunctions<ServerFunctions>>(socket, ownFunctions))
+                socket.on('message', makeCallListener<ValidTwoWayFunctions<ServerFunctions>>(socket, ownFunctions))
             }
 
             twoWayServer.emitConnection(caller, clientId, socket, request)
@@ -110,7 +112,7 @@ export class TwoWayServer<
     //callAll = makeAllCaller<ClientFunctions>(this.clients)
 
     close = () => {
-        console.log('closing 2WayServer\'s web socket')
+        console.log('closing TwoWayServer\'s web socket')
         this.webSocketServer.close()// this returns nothing and doesn't seem to care whether it is already closed or not
     }
     [Symbol.dispose] = () => {

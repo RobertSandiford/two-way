@@ -12,7 +12,7 @@
 // describe('insertDynamicProcedures()', ({ it }) => {
 
 // //     // it('dummy test to check basics', () => {
-// //     //     const jsonString = '{ "foo": "bar", "baz": "__2WAY_DYNAMIC_PROCEDURE__1", "bim": "__2WAY_DYNAMIC_PROCEDURE__2" }'
+// //     //     const jsonString = '{ "foo": "bar", "baz": "__TWO_WAY_DYNAMIC_PROCEDURE__1", "bim": "__TWO_WAY_DYNAMIC_PROCEDURE__2" }'
 // //     //     const result = insertDynamicProcedures(jsonString)
 // //     //     expect(result).to.equal('{ "foo": "bar", "baz": "DP1", "bim": "DP2" }')
 // //     // })
@@ -20,14 +20,14 @@
 //     it('converts dynamic procedure references to functions', () => {
 
 //         const callResult: CrosstalkDataWithDynamicProceduresIn = {
-//             a :  "__2WAY_DYNAMIC_PROCEDURE__1",
-//             b : "__2WAY_DYNAMIC_PROCEDURE__2"
+//             a :  "__TWO_WAY_DYNAMIC_PROCEDURE__1",
+//             b : "__TWO_WAY_DYNAMIC_PROCEDURE__2"
 //         }
 //         console.log('callResult', structuredClone(callResult))
 
 //         const socket = new MockWebSocket()
 
-//         //const jsonString = '{ "foo": "bar", "baz": "__2WAY_DYNAMIC_PROCEDURE__1", "bim": "__2WAY_DYNAMIC_PROCEDURE__2" }'
+//         //const jsonString = '{ "foo": "bar", "baz": "__TWO_WAY_DYNAMIC_PROCEDURE__1", "bim": "__TWO_WAY_DYNAMIC_PROCEDURE__2" }'
 //         const hydratedResult = hydrateDynamicProcedures(socket, callResult)
 //         console.log('hydratedResult', hydratedResult)
 //         //expect(hydratedResult).to.equal('{ "foo": "bar", "baz": "DP1", "bim": "DP2" }')

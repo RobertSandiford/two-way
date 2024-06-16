@@ -3,7 +3,7 @@
 // import { intToBase32, base32ToInt, bigIntToBase32, base32ToBigInt } from './base64UrlEncode.js'
 // import { DynamicProcedure, DynamicProcedureName, DynamicProcedureReference, JsonableFunctionBasicConstraint } from './types.js'
 
-// export const dynamicProcedureString ='__2WAY_DYNAMIC_PROCEDURE__'
+// export const dynamicProcedureString ='__TWO_WAY_DYNAMIC_PROCEDURE__'
 
 // function makeDynamicProcedureReference(index: number): DynamicProcedureReference {
 //     return (dynamicProcedureString + intToBase32(index)) as DynamicProcedureReference // eslint-disable-line no-type-assertion/no-type-assertion

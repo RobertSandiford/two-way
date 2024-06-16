@@ -1,4 +1,4 @@
-# 2Way - Bi-Directional Typed WebSocket Communication
+# @two-way - Bi-Directional Typed WebSocket Communication
 
 ### Server
 ```ts
@@ -29,7 +29,7 @@ const server = new TwoWayServer<ServerFunctions, ClientFunctions>(
     {
         // event callbacks
         onListening: () => {
-            console.log(`2Way Server listening on port ${serverPort}`)
+            console.log(`two-way Server listening on port ${serverPort}`)
         },
         onConnection: async (caller, clientId, socket) => {
             console.log(`Client ${clientId} connected`)

@@ -7,7 +7,7 @@ import {
 } from './types.fullDynamicProcedures.js'
 import { DynamicProcedureMethod, FunctionFromDynamicProcedureArgs, ITwoWayWebSocket } from './ITwoWayWebSocket.fullDynamicProcedures.js'
 
-export const dynamicProcedureString ='__2WAY_DYNAMIC_PROCEDURE__'
+export const dynamicProcedureString ='__TWO_WAY_DYNAMIC_PROCEDURE__'
 
 export function makeDynamicProcedureReference<N extends number>(
     index: N

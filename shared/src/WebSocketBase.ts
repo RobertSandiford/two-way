@@ -3,7 +3,7 @@
 // import { DynamicProcedure, DynamicProcedureName, DynamicProcedureReference, TwoWayFunctionBasicConstraint } from './types.js'
 // import { DynamicProcedureMethod, FunctionFromDynamicProcedureArgs } from './IWebSocket.js'
 
-// export const dynamicProcedureString ='__2WAY_DYNAMIC_PROCEDURE__'
+// export const dynamicProcedureString ='__TWO_WAY_DYNAMIC_PROCEDURE__'
 
 // export function makeDynamicProcedureReference<N extends number, F extends TwoWayFunctionBasicConstraint>(
 //     index: N

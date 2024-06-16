@@ -20,7 +20,7 @@ export function convertIncomingData(
     if (typeof data === 'object' && data !== null) {
         convertIncomingDataObject(socket, dynamicCalls, data)
     } else if (JsonDataIsDynamicProcedureReference(data)) {
-        return referenceTo2WayFunction(socket, dynamicCalls, data)
+        return referenceToTwoWayFunction(socket, dynamicCalls, data)
     }
     return data
 }
@@ -35,13 +35,13 @@ function convertIncomingDataObject(
             convertIncomingDataObject(socket, dynamicCalls, value)
         } else if (JsonDataIsDynamicProcedureReference(value)) {
             // eslint-disable-next-line no-type-assertion/no-type-assertion -- we're claiming this an object to satisfy TS and let us avoid handling arrays seperately
-            (data as TwoWayDataObject)[key] = referenceTo2WayFunction(socket, dynamicCalls, value)
+            (data as TwoWayDataObject)[key] = referenceToTwoWayFunction(socket, dynamicCalls, value)
         }
     }
 }
 
 
-function referenceTo2WayFunction(
+function referenceToTwoWayFunction(
     socket: ITwoWayWebSocket,
     dynamicCalls: DynamicCalls,
     ref: DynamicProcedureReference
@@ -49,9 +49,9 @@ function referenceTo2WayFunction(
     const dnyProcIdString = ref.substring(dynamicProcedureString.length)
     const dynProcId = Number(dnyProcIdString)
     if (!Number.isInteger(dynProcId))
-        throw new Error(`_ReferenceTo2WayFunction() error: dynamic procedure ID is not an integer, received "${dnyProcIdString}"`) // eslint-disable-line max-len
+        throw new Error(`_referenceToTwoWayFunction() error: dynamic procedure ID is not an integer, received "${dnyProcIdString}"`) // eslint-disable-line max-len
     if (dynProcId < 1)
-        throw new Error(`_ReferenceTo2WayFunction() error: dynamic procedure ID is smaller than 1, received "${dnyProcIdString}"`) // eslint-disable-line max-len
+        throw new Error(`_referenceToTwoWayFunction() error: dynamic procedure ID is smaller than 1, received "${dnyProcIdString}"`) // eslint-disable-line max-len
 
     //const dynProc = socket.dynamicProcedures[String(dynProcId)]
 

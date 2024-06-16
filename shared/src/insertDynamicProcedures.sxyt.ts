@@ -9,7 +9,7 @@
 // describe('insertDynamicProcedures()', ({ it }) => {
 
 //     // it('dummy test to check basics', () => {
-//     //     const jsonString = '{ "foo": "bar", "baz": "__2WAY_DYNAMIC_PROCEDURE__1", "bim": "__2WAY_DYNAMIC_PROCEDURE__2" }'
+//     //     const jsonString = '{ "foo": "bar", "baz": "__TWO_WAY_DYNAMIC_PROCEDURE__1", "bim": "__TWO_WAY_DYNAMIC_PROCEDURE__2" }'
 //     //     const result = insertDynamicProcedures(jsonString)
 //     //     expect(result).to.equal('{ "foo": "bar", "baz": "DP1", "bim": "DP2" }')
 //     // })
@@ -25,7 +25,7 @@
 //         const jsonString = JSON.stringify(callResult)
 //         console.log('jsonString', jsonString)
 
-//         //const jsonString = '{ "foo": "bar", "baz": "__2WAY_DYNAMIC_PROCEDURE__1", "bim": "__2WAY_DYNAMIC_PROCEDURE__2" }'
+//         //const jsonString = '{ "foo": "bar", "baz": "__TWO_WAY_DYNAMIC_PROCEDURE__1", "bim": "__TWO_WAY_DYNAMIC_PROCEDURE__2" }'
 //         const result = insertDynamicProcedures(jsonString)
 //         expect(result).to.equal('{ "foo": "bar", "baz": "DP1", "bim": "DP2" }')
 //     })

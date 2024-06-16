@@ -1,7 +1,7 @@
 
 import type {
     CallResult, TwoWayFunctionLowConstraint, TwoWayFunctionsLowConstraint,
-    TwoWayFunctionsLowConstraintEntry, TwoWayMessage, ReturnMessage, Valid2WayFunctions,
+    TwoWayFunctionsLowConstraintEntry, TwoWayMessage, ReturnMessage, ValidTwoWayFunctions,
     ReturnMessageOutgoing,
     ReturnDynamicMessageOutgoing
 } from "./types.fullDynamicProcedures.js"
@@ -10,7 +10,7 @@ import { ITwoWayWebSocket } from "./ITwoWayWebSocket.fullDynamicProcedures.js"
 import { convertOutgoingData } from "./convertOutgoingData.js"
 import { WebSocketBase } from "./WebSocketBase.fullDynamicProcedures.js"
 
-export function makeCallListener<Functions extends Valid2WayFunctions<TwoWayFunctionsLowConstraint>>(
+export function makeCallListener<Functions extends ValidTwoWayFunctions<TwoWayFunctionsLowConstraint>>(
     socket: ITwoWayWebSocket,
     procedures: Functions,
 ) {

@@ -4,7 +4,7 @@ export function insertDynamicProcedures(jsonString: string): StringWithDynamicPr
     let outString = ''
     let stringPos = 0
     //console.log('jsonString', jsonString)
-    const dynProcRegex = /"__2WAY_DYNAMIC_PROCEDURE__([0-9]+)"/g
+    const dynProcRegex = /"__TWO_WAY_DYNAMIC_PROCEDURE__([0-9]+)"/g
     // for (const match of jsonString.matchAll(dynProcRegex)) {
     //     console.log('match', match)
     //     const { index } = match
